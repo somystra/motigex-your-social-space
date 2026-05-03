@@ -16,6 +16,9 @@ const dict = {
     guestMode: "Guest mode — sign up to unlock posting & messaging.",
     createdBy: "Created by NetGlobal team",
     theme: "Theme", language: "Language",
+    reels: "Reels", create: "Create", createPost: "Create post", createReel: "Create reel",
+    chooseMedia: "Choose photo or video", uploading: "Uploading...",
+    noReels: "No reels yet. Be the first to share one.",
   },
   uz: {
     appName: "Motigex", feed: "Lenta", profile: "Profil", search: "Qidiruv", messages: "Xabarlar",
@@ -30,6 +33,9 @@ const dict = {
     guestMode: "Mehmon rejimi — post va xabarlar uchun ro'yxatdan o'ting.",
     createdBy: "NetGlobal jamoasi tomonidan yaratilgan",
     theme: "Mavzu", language: "Til",
+    reels: "Reels", create: "Yaratish", createPost: "Post joylash", createReel: "Reels joylash",
+    chooseMedia: "Rasm yoki video tanlang", uploading: "Yuklanmoqda...",
+    noReels: "Hozircha reels yo'q. Birinchi bo'lib joylang.",
   },
   ru: {
     appName: "Motigex", feed: "Лента", profile: "Профиль", search: "Поиск", messages: "Сообщения",
@@ -44,6 +50,9 @@ const dict = {
     guestMode: "Гостевой режим — зарегистрируйтесь для постов и сообщений.",
     createdBy: "Создано командой NetGlobal",
     theme: "Тема", language: "Язык",
+    reels: "Reels", create: "Создать", createPost: "Создать пост", createReel: "Создать Reels",
+    chooseMedia: "Выберите фото или видео", uploading: "Загрузка...",
+    noReels: "Пока нет Reels. Будьте первым.",
   },
 };
 
