@@ -14,6 +14,7 @@ export const Route = createFileRoute("/")({ component: Index });
 
 type Post = {
   id: string; content: string; created_at: string; user_id: string;
+  media_url: string | null; media_type: string;
   profiles?: { display_name: string | null; username: string | null; avatar_url: string | null } | null;
 };
 
@@ -28,6 +29,7 @@ function Index() {
     const { data } = await supabase
       .from("posts")
       .select("*, profiles(display_name, username, avatar_url)")
+      .neq("media_type", "video")
       .order("created_at", { ascending: false })
       .limit(50);
     setPosts((data as Post[]) ?? []);
@@ -104,7 +106,10 @@ function Index() {
                   <div className="text-xs text-muted-foreground">@{p.profiles?.username ?? "user"}</div>
                 </div>
               </div>
-              <p className="whitespace-pre-wrap text-sm leading-relaxed">{p.content}</p>
+              {p.content && <p className="whitespace-pre-wrap text-sm leading-relaxed">{p.content}</p>}
+              {p.media_url && p.media_type === "image" && (
+                <img src={p.media_url} alt="" className="mt-3 w-full rounded-2xl border border-glass-border" />
+              )}
             </article>
           ))
         )}

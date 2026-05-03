@@ -2,7 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { useAuth } from "@/lib/auth";
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
-import { Home, User, Search, MessageCircle, Sun, Moon, LogOut, Globe } from "lucide-react";
+import { Home, User, Search, MessageCircle, Sun, Moon, LogOut, Globe, Film, PlusSquare } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,
@@ -25,6 +25,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
           <nav className="flex items-center gap-1 ml-auto">
             <NavLink to="/" icon={<Home size={18} />} label={t("feed")} />
+            <NavLink to="/reels" icon={<Film size={18} />} label={t("reels")} />
+            <NavLink to="/create" icon={<PlusSquare size={18} />} label={t("create")} />
             <NavLink to="/search" icon={<Search size={18} />} label={t("search")} />
             <NavLink to="/messages" icon={<MessageCircle size={18} />} label={t("messages")} />
             <NavLink to="/profile" icon={<User size={18} />} label={t("profile")} />
