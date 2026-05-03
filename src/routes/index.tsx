@@ -106,7 +106,10 @@ function Index() {
                   <div className="text-xs text-muted-foreground">@{p.profiles?.username ?? "user"}</div>
                 </div>
               </div>
-              <p className="whitespace-pre-wrap text-sm leading-relaxed">{p.content}</p>
+              {p.content && <p className="whitespace-pre-wrap text-sm leading-relaxed">{p.content}</p>}
+              {p.media_url && p.media_type === "image" && (
+                <img src={p.media_url} alt="" className="mt-3 w-full rounded-2xl border border-glass-border" />
+              )}
             </article>
           ))
         )}
